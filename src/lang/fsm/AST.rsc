@@ -1,6 +1,6 @@
 module lang::fsm::AST
 
-data StateMachine = fsm([State] states, [Transitions] transitions);
+data StateMachine = fsm(list[State] states, list[Transition] transitions);
 
 data State = state(str name)
 		   | startState()
@@ -8,3 +8,4 @@ data State = state(str name)
 		   ;
 
 data Transition = transition(str evt, State source, State target);
+
